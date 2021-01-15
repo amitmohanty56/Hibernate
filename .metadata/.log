@@ -1,0 +1,88 @@
+!SESSION 2021-01-15 15:39:51.000 -----------------------------------------------
+eclipse.buildId=4.4.2.201911201053-RELEASE
+java.version=14.0.2
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_SG
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY org.eclipse.jface 2 0 2021-01-15 15:40:06.239
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-01-15 15:40:06.239
+!MESSAGE A conflict occurred for COMMAND+SHIFT+T:
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@66a93b25,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3f3f554f,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.ui 2 2 2021-01-15 15:45:21.425
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-01-15 15:47:53.278
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-01-15 15:47:53.278
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@62a89e92[org.springframework.tooling.boot.ls:1.13.0.201911200938(id=626)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-01-15 15:47:53.279
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-01-15 15:47:53.305
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-01-15 15:47:55.099
+!MESSAGE Boot LS startup time from start to initialized: 1809ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-01-15 15:47:55.130
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.EmBPZPsjisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-01-15 15:47:55.132
+!MESSAGE subscribing to classpath changes: sts4.classpath.EmBPZPsj isBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-01-15 15:47:55.134
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-01-15 15:47:55.135
+!MESSAGE subsribers = {sts4.classpath.EmBPZPsj=Send Classpath Notifications(106)}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-01-15 15:47:55.136
+!MESSAGE Sending initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-01-15 15:47:55.136
+!MESSAGE project hibernate ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-01-15 15:47:55.136
+!MESSAGE Sending initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-01-15 15:47:55.136
+!MESSAGE Preparing classpath changed notification hibernate
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-01-15 15:47:55.137
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.EmBPZPsj => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-01-15 15:47:55.137
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-01-15 15:47:55.138
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-01-15 15:47:55.139
+!MESSAGE buffering callback sts4.classpath.EmBPZPsj hibernate false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-01-15 15:47:55.139
+!MESSAGE executing callback sts4.classpath.EmBPZPsj 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-01-15 15:47:55.163
+!MESSAGE executing callback sts4.classpath.EmBPZPsj SUCCESS [done]

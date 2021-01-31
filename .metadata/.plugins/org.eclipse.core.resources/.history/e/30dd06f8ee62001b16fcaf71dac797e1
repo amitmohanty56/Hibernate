@@ -1,0 +1,8 @@
+package hibernate.bean;
+
+public class Student {
+	private long Id;
+	private String name;
+	private Address address;
+
+}

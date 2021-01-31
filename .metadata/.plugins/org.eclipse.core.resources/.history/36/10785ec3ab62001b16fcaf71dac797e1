@@ -1,0 +1,38 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name = "hinernate.query.Employee" table = "Employee">
+      
+      <meta attribute = "class-description">
+         This class contains the employee detail. 
+      </meta>
+      
+      <id name = "id" type = "int" column = "id">
+         <generator class="assigned"/>
+      </id>
+     <!--  <version name="version" column="version"></version> -->
+      
+      <discriminator  type="string" length="20"></discriminator> 
+      
+      <property name = "firstName" column = "firstname" type = "string"/>
+      <property name = "lastName" column = "lastname" type = "string"/>
+      <property name = "phoneNumber" column = "phonenumber" type = "int"/>
+      <property name="country" column="country" type="string"></property>
+      
+      <subclass name="hibernate.mapping.ContractEmployee">
+      <property name="contractPeriod" column = "contractperiod"></property>
+      <property name="hourlyRate" column="hourlyRate"></property>
+     
+      </subclass>
+      
+      <subclass name="hibernate.mapping.RegularEmployee">
+      <property name="salary" column="salary"></property>
+      <property name="bonus" column="bonus"></property>
+      
+      </subclass>
+      
+   </class>
+</hibernate-mapping>

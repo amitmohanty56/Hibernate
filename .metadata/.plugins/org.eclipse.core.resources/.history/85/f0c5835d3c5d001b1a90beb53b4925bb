@@ -1,0 +1,28 @@
+package hibernate.nativesql;
+
+import java.util.List;
+
+import org.hibernate.Query;
+import org.hibernate.SQLQuery;
+import org.hibernate.Session;
+
+import hinernate.query.ConfigurationUtility;
+import hinernate.query.Employee;
+
+public class NativeSQLClient {
+
+	public static void main(String[] args) {
+		Session session = ConfigurationUtility.getSession();
+		String nativeSql = "select * from sys.employee";
+		SQLQuery query = session.createSQLQuery(nativeSql);
+		query.addEntity(Employee.class); //if return 1 complete row then addEntity() method.
+		
+		List<Employee> listOfEmployee = query.list();
+		
+		for(Employee emp : listOfEmployee) {
+			System.out.println(emp);
+		}
+
+	}
+
+}

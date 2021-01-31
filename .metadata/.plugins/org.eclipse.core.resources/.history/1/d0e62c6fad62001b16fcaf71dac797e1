@@ -1,0 +1,27 @@
+package hibernate.mapping;
+
+public class ContractEmployee {
+	
+	private String contractPeriod;
+	private String hourlyRate;
+	
+	public ContractEmployee() {
+		System.out.println("Contract Employee default Constructor");
+	}
+	
+	public String getContractPeriod() {
+		return contractPeriod;
+	}
+	public void setContractPeriod(String contractPeriod) {
+		this.contractPeriod = contractPeriod;
+	}
+	public String getHourlyRate() {
+		return hourlyRate;
+	}
+	public void setHourlyRate(String hourlyRate) {
+		this.hourlyRate = hourlyRate;
+	}
+	
+	
+
+}

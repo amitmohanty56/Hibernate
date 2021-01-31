@@ -1,0 +1,17 @@
+package hibernate.criteria;
+
+import org.hibernate.Session;
+
+import hinernate.query.ConfigurationUtility;
+import hinernate.query.Employee;
+
+public class CriteriaAPIClient {
+
+	public static void main(String[] args) {
+		
+		Session session = ConfigurationUtility.getSession();
+		Criteria criteria = session.createCriteria(Employee.class);
+
+	}
+
+}

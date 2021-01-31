@@ -1,0 +1,15 @@
+package hibernate.criteria;
+
+import org.hibernate.Session;
+
+import hinernate.query.ConfigurationUtility;
+
+public class CriteriaAPIClient {
+
+	public static void main(String[] args) {
+		
+		Session session = ConfigurationUtility.getSession();
+
+	}
+
+}

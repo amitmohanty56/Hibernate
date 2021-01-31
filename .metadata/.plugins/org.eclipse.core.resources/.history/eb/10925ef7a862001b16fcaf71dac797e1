@@ -1,0 +1,8 @@
+package hibernate.mapping;
+
+public class ContractEmployee {
+	
+	private String contractPeriod;
+	private String hourlyRate;
+
+}

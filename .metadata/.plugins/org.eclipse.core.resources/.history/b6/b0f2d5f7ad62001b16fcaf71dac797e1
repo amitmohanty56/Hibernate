@@ -1,0 +1,32 @@
+package hibernate.mapping;
+
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+import hinernate.query.ConfigurationUtility;
+import hinernate.query.Employee;
+
+public class TablePerClass_Client {
+
+	public static void main(String[] args) {
+		
+		Session session = ConfigurationUtility.getSession();
+		
+		Transaction tranx = session.beginTransaction();
+		
+		Employee emp = new Employee();
+		//Update the existing record.
+		//Employee emp = (Employee) session.get(Employee.class, 5);
+		//Use this PK/ID based on the PK generator tag.
+		//emp.setId(10);
+		emp.setFirstName("Ravindra");
+		emp.setLastName("Jadeja");
+		emp.setPhoneNumber(2345643);
+		emp.setCountry("Ind");
+		
+		session.save(emp);
+		tranx.commit();
+
+	}
+
+}

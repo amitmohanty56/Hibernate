@@ -1,0 +1,25 @@
+package hibernate.criteria;
+
+import org.hibernate.Criteria;
+import org.hibernate.Session;
+import org.hibernate.criterion.Projection;
+import org.hibernate.criterion.Projections;
+
+import hinernate.query.ConfigurationUtility;
+import hinernate.query.Employee;
+
+public class CriteriaWithProjections {
+
+	public static void main(String[] args) {
+		
+		Session session = ConfigurationUtility.getSession();
+		//Select all the rows and columns from employee table.
+		Criteria criteria = session.createCriteria(Employee.class);
+		
+		Projection p1 = Projections.property("firstname");
+		
+		ProjectionList projList = Projections.projectionList();
+
+	}
+
+}

@@ -1,0 +1,8 @@
+package hibernate.bean;
+
+public class Story {
+	
+	private int id;
+	private String information;
+
+}

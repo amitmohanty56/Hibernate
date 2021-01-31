@@ -1,0 +1,22 @@
+package hibernate.mapping;
+
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+import hibernate.bean.Student;
+import hinernate.query.ConfigurationUtility;
+
+public class ComponentMappingClient {
+
+	public static void main(String[] args) {
+		
+		Session session = ConfigurationUtility.getSession();
+		Transaction tanx = session.beginTransaction();
+		
+		Address address = new Address();
+		Student student = new Student();
+		
+		
+	}
+
+}

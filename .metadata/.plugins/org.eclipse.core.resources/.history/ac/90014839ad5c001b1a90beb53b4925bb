@@ -1,0 +1,24 @@
+package hibernate.hql;
+
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+import hinernate.query.ConfigurationUtility;
+
+public class HQLNonSelectOperation {
+
+	public static void main(String[] args) {
+		Session session = ConfigurationUtility.getSession();
+		Transaction tranx = session.beginTransaction();
+		
+		String sql = "update Employee set country= ? where id = ?";
+		Query query = session.createQuery(sql);
+		query.setParameter(0, "ind");
+		query.setParameter(1, 1);
+		int noOfRowsUpdated = query.executeUpdate();
+		tranx.commit();
+
+	}
+
+}

@@ -1,0 +1,49 @@
+package hibernate.mapping;
+
+import java.util.HashSet;
+import java.util.Set;
+
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+import hibernate.bean.Group;
+import hibernate.bean.Player;
+import hibernate.bean.Story;
+import hibernate.bean.Team;
+import hinernate.query.ConfigurationUtility;
+
+public class OneToManyClient_List {
+
+	public static void main(String[] args) {
+		Session session = ConfigurationUtility.getSession();
+		Transaction tranx = session.beginTransaction();
+		
+        Story stories1 = new Story();
+        stories1.setId(1);
+        stories1.setInformation("");
+        
+        Story stories2 = new Story();
+        stories2.setId(2);
+        stories1.setInformation("");
+        
+        
+        Story stories3 = new Story();
+        stories3.setId(3);
+        stories3.setInformation("");
+        
+        Group froup = new Group();
+        
+//		session.save(team);
+//		session.flush();
+//		tranx.commit();
+//		session.close();
+		
+		Team team = (Team)session.get(Team.class, new Integer(1));
+		System.out.println(team.getName());
+		//System.out.println(team);
+		
+		
+
+	}
+
+}

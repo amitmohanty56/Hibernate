@@ -1,0 +1,15 @@
+package hibernate.hql;
+
+import org.hibernate.Session;
+
+import hinernate.query.ConfigurationUtility;
+
+public class HQLNonSelectOperation {
+
+	public static void main(String[] args) {
+		Session session = ConfigurationUtility.getSession();
+		Transaction tranx = session.beginTransaction();
+
+	}
+
+}

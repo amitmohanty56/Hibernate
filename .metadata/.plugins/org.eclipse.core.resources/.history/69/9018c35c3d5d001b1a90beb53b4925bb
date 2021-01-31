@@ -1,0 +1,40 @@
+package hibernate.nativesql;
+
+import java.util.List;
+
+import org.hibernate.Query;
+import org.hibernate.SQLQuery;
+import org.hibernate.Session;
+import org.hibernate.type.IntegerType;
+
+import hinernate.query.ConfigurationUtility;
+import hinernate.query.Employee;
+
+public class NativeSQLClient {
+
+	public static void main(String[] args) {
+		Session session = ConfigurationUtility.getSession();
+		//String nativeSqlFullRow = "select * from sys.employee";
+		//SQLQuery query = session.createSQLQuery(nativeSqlFullRow);
+		//query.addEntity(Employee.class); //if return 1 complete row then addEntity() method.
+		
+		//List<Employee> listOfEmployee = query.list();
+		
+//		for(Employee emp : listOfEmployee) {
+//			System.out.println(columns[0]);
+//		}
+
+		
+		String nativeSqlLimitedRow = "select id from sys.employee";
+		SQLQuery query = session.createSQLQuery(nativeSqlLimitedRow);
+		query.addScalar("id", new IntegerType());// if return limited column then addScalar() method.
+		
+		List<Object[]> listOfEmployee = query.list();
+		
+//		for(Object[] columns : listOfEmployee) {
+//			System.out.println(columns[0]);
+//		}
+
+	}
+
+}

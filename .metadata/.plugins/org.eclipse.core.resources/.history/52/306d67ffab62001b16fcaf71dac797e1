@@ -1,0 +1,10 @@
+package hibernate.mapping;
+
+public class TablePerClass_Client {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

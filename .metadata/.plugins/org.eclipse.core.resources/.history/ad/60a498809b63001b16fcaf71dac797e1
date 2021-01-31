@@ -1,0 +1,27 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name = "hibernate.bean.Group" table = "Group">
+      
+      <meta attribute = "class-description">
+         This class contains the Group detail. 
+      </meta>
+      
+      <id name = "id" type = "int" column = "id">
+         <generator class="assigned"/>
+      </id>
+      
+      
+      <property name = "name" column = "name" type = "string"/>
+      <list name="stories" table="Story" cascade="all" lazy="false">
+      <key column="id_fk"></key>
+      <list-index base="0" column="INDEX1"></list-index>
+      
+      <one-to-many class=hibernate.bean.Story/>
+      </list>
+      
+   </class>
+</hibernate-mapping>

@@ -1,5 +1,0 @@
-package hibernate.select_operation;
-
-public class Employee {
-
-}

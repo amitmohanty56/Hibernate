@@ -4,19 +4,21 @@
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
 
 <hibernate-mapping>
-   <class name = "Employee" table = "Employee">
+   <class name = "hinernate.query.Employee" table = "Employee">
       
       <meta attribute = "class-description">
          This class contains the employee detail. 
       </meta>
       
       <id name = "id" type = "int" column = "id">
-         <generator class="assigned"/>
+         <generator class="increment"/>
       </id>
+      <version name="version" column="version"></version>
       
       <property name = "firstName" column = "firstname" type = "string"/>
       <property name = "lastName" column = "lastname" type = "string"/>
       <property name = "phoneNumber" column = "phonenumber" type = "int"/>
+      <property name="country" column="country" type="string"></property>
       
    </class>
 </hibernate-mapping>

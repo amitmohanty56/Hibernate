@@ -10,10 +10,19 @@
 		<property name="hibernate.connection.password">Connect!23</property>
 		
 		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
-		<property name="hbm2ddl.auto">update</property>
+		<property name="hbm2ddl.auto">create</property>
 		<property name="show_sql">true</property>
 		<property name="format_sql">true</property>
-		<mapping resource="employee.hbm.xml"/>		
+		<!-- <mapping resource="employee.hbm.xml"/> -->		
+		<!-- <mapping resource="employee_tableperclass.hbm.xml"/> -->
+		<!-- <mapping resource = "student.hbm.componentmapping.xml"/> -->
+		<!-- Configure all the table mapping file i.e mapping file per table specially in case of association-->
+		<!-- <mapping resource = "team.hbm.onetomany.xml"/>
+		<mapping resource="player.hbm.xml"/> -->
+		<!--  -->
+		<mapping resource="group.hbm.xml"/>
+		<mapping resource="story.hbm.xml"/>
+		
 	</session-factory>
 </hibernate-configuration>
 
